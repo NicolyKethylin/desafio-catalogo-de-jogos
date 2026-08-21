@@ -1,4 +1,4 @@
-public class JogoOnline extends Jogo implements Jogando{
+public class JogoOnline extends Jogo implements Jogando, Pagamento {
 
     public JogoOnline(String nome, String categoria, String descricao, Double preco){
         super(nome, categoria, descricao, preco);
@@ -12,5 +12,10 @@ public class JogoOnline extends Jogo implements Jogando{
     @Override
     public void encerrarJogo() {
         System.out.println("Encerrando jogo On-line...");
+    }
+
+    @Override
+    public Double calcularDesconto(){
+        return getPreco() * 0.25;
     }
 }

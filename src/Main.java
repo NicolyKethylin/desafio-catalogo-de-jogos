@@ -7,6 +7,17 @@ void main() {
 
     for (Jogando jogo : jogos) {
         jogo.iniciarJogo();
+
+        double desconto = jogo.calcularDesconto();
+        double precoFinal = jogo.getPreco() - desconto;
+
+        System.out.println("Nome: " + jogo.getNome());
+        System.out.println("Categoria: " + jogo.getCategoria());
+        System.out.println("Descrição: " + jogo.getDescricao());
+        System.out.printf("Preço original: R$ %.2f%n", jogo.getPreco());
+        System.out.printf("Desconto: R$ %.2f%n", desconto);
+        System.out.printf("Preço final: R$ %.2f%n", precoFinal);
+
         jogo.encerrarJogo();
 
         System.out.println("----------------");
