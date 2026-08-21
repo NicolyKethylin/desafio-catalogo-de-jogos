@@ -1,6 +1,11 @@
-public class JogoDigital extends Jogo implements Jogando, Pagamento {
+public class JogoDigital extends Jogo implements Jogando {
 
-    public JogoDigital(String nome, String categoria, String descricao, Double preco){
+    public JogoDigital(
+            String nome,
+            String categoria,
+            String descricao,
+            Double preco
+    ){
         super(nome, categoria, descricao, preco); // Acessando a classe pai(Jogo)
     }
 
@@ -12,10 +17,5 @@ public class JogoDigital extends Jogo implements Jogando, Pagamento {
     @Override
     public void encerrarJogo() {
         System.out.println("Encerrando jogo Digital...");
-    }
-
-    @Override
-    public Double calcularDesconto(){
-        return getPreco() * 0.10;
     }
 }

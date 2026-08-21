@@ -5,10 +5,12 @@ void main() {
            new JogoOnline("GTA", "Aventura", "é um clássico jogo de ação e aventura em mundo aberto desenvolvido pela Rockstar Games que acompanha a jornada de Carl \"CJ\" Johnson no início dos anos 1990.", 23.09)
    );
 
+    Descontavel formaPagamento = new Cartao();
+
     for (Jogando jogo : jogos) {
         jogo.iniciarJogo();
 
-        double desconto = jogo.calcularDesconto();
+        double desconto = formaPagamento.calcularDesconto(jogo.getPreco());
         double precoFinal = jogo.getPreco() - desconto;
 
         System.out.println("Nome: " + jogo.getNome());

@@ -1,6 +1,12 @@
-public class JogoFisico extends Jogo implements Jogando, Pagamento {
+public class JogoFisico extends Jogo implements Jogando {
 
-    public JogoFisico(String nome, String categoria, String descricao, Double preco){
+    public JogoFisico(
+            String nome,
+            String categoria,
+            String descricao,
+            Double preco
+    ){
+
         super(nome, categoria, descricao, preco);
     }
 
@@ -12,11 +18,6 @@ public class JogoFisico extends Jogo implements Jogando, Pagamento {
     @Override
     public void encerrarJogo() {
         System.out.println("Encerrando jogo Fisico...");
-    }
-
-    @Override
-    public Double calcularDesconto(){
-        return getPreco() * 0.15;
     }
 
 }

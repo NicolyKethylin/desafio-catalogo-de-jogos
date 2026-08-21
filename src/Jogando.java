@@ -3,8 +3,6 @@ public interface Jogando {
 
     public void encerrarJogo();
 
-    public Double calcularDesconto();
-
     public String getNome();
 
     public String getCategoria();
